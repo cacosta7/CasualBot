@@ -27,10 +27,8 @@ async def yuh(ctx):
 async def chat(ctx, *, question: str):
     response = gpt_client.chat.completions.create(
         messages=[
-            {
-                "role": "system", "content": "you are condescending and rude however you are also very helpful",
-                "role":"user", "content": question 
-            }
+            {"role": "system", "content": "you are rude and condescending but very helpful regardless."},
+            {"role":"user", "content": question}
         ],
         model="gpt-3.5-turbo"
     )
