@@ -23,7 +23,7 @@ bot = commands.Bot(command_prefix = 'c! ', intents=intents)
 async def yuh(ctx):
     await ctx.send('yuh')
 
-@bot.command()
+@bot.command(aliases=['c'])
 async def chat(ctx, *, question: str):
     response = gpt_client.chat.completions.create(
         messages=[
